@@ -2,6 +2,8 @@ import json
 import logging
 
 from functools import wraps
+from pprint import pformat
+
 
 from schema import SchemaError, Schema
 
@@ -20,10 +22,11 @@ def logging(message):
             logger.info(message)
             res = function(*args, **kwargs)
             logger.info(f'Method:{res.request.method}, '
-                        f'request body: {res.request.body}, '
+                        f'request body: {pformat(res.request.body)}, '
                         f'url: {res.request.url}')
             logger.info(f'Response status:{res.status_code}, '
-                        f'response body: {res.text}, url: {res.request.url}')
+                        f'response body: {pformat(res.text)}, '
+                        f'url: {res.request.url}')
             return res
         return inner
     return wrapper

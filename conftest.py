@@ -46,6 +46,10 @@ def pytest_addoption(parser):
 
 @pytest.fixture()
 def create_booking(client):
+    """
+    Create new booking with random data
+    :return: response dict
+    """
     data = BookingData().random()
     res = client.create_booking(data)
     return res.json()

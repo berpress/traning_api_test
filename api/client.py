@@ -12,8 +12,6 @@ logger = logging.getLogger()
 
 class Client:
     s = requests.Session()
-    AUTH = "/auth"
-    GET_BOOKING_BY_ID = '/booking/{uid}'
 
     def __init__(self, url):
         self.url = url
