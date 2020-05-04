@@ -35,7 +35,6 @@ class Client:
     @log('Create new booking')
     def create_booking(self, data: BookingData):
         data = data.object_to_dict()
-        # data = json.loads(json.dumps(data, default=lambda o: o.__dict__))
         return self.s.post(self.url + "/booking", json=data)
 
     @log('Update booking')

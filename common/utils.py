@@ -3,7 +3,7 @@ import logging
 
 from functools import wraps
 
-from schema import SchemaError
+from schema import SchemaError, Schema
 
 logger = logging.getLogger()
 
@@ -29,7 +29,11 @@ def logging(message):
     return wrapper
 
 
-def is_validate(data, schema):
+def is_validate(data: dict, schema: Schema) -> bool:
+    """
+    Validate json schema
+    :return: True if validation is successful else False
+    """
     try:
         data = json.loads(json.dumps(data, default=lambda o: o.__dict__))
         schema.validate(data)

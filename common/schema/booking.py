@@ -1,6 +1,6 @@
 from schema import Schema
 
-booking_schema = Schema({"bookingid": int, "booking": {
+post_booking_schema = Schema({"bookingid": int, "booking": {
     "firstname": str,
     "lastname": str,
     "totalprice": int,
@@ -11,3 +11,16 @@ booking_schema = Schema({"bookingid": int, "booking": {
     },
     "additionalneeds": str
 }})
+
+
+get_booking_schema = Schema({
+    "firstname": str,
+    "lastname": str,
+    "totalprice": int,
+    "depositpaid": bool,
+    "bookingdates": {
+        "checkin": str,
+        "checkout": str,
+    },
+    "additionalneeds": str
+})

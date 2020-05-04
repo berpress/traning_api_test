@@ -9,7 +9,7 @@ class _BookingDates:
         self.checkout = checkout
 
 
-class BookingData():
+class BookingData:
     def __init__(self, firstname=None, lastname=None, totalprice=None,
                  depositpaid=None, checkin=None, checkout=None,
                  additionalneeds=None):
