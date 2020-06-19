@@ -3,3 +3,6 @@ lint:
 
 pytest:
 	@pytest -s -v
+
+report:
+	@pytest -s -v --html=report.html

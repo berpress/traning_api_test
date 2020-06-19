@@ -8,6 +8,7 @@ authors = ["litovsky <berpress@gmail.com>"]
 python = "^3.6"
 flake8 = "^3.7.9"
 requests = "^2.23.0"
+pytest-html = "^2.1.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.1"
