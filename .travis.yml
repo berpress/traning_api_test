@@ -1,0 +1,12 @@
+language: python
+python: 3.6
+flake8: 3.7.9
+
+addons:
+  chrome: stable
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest
