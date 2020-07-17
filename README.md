@@ -1,6 +1,6 @@
 # Simple Python + Pytest automation api test project
 
-[![Build Status](https://travis-ci.org/berpress/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/berpress/frontend-project-lvl1)
+[![Build Status](https://travis-ci.org/test1910md/traning_api_test.svg?branch=master)](https://travis-ci.org/github/test1910md/traning_api_test)
 
 ### How to start
 1. Use python 3.6 +
